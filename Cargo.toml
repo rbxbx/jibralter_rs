@@ -1,0 +1,6 @@
+[package]
+name = "jibralter"
+version = "0.1.0"
+authors = ["bex piltz <rbxbxdev@gmail.com>"]
+
+[dependencies]
