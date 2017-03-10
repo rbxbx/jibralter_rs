@@ -1,5 +1,19 @@
+/* #[test] */
+/* fn it_works() { */
+/*     #[test] */
+/*     fn larger_can_hold_smaller() { */
+/*     } */
+
+#[cfg(test)]
+mod tests {
 #[test]
-fn it_works() {
+    fn it_works() {
+        let one = 1;
+        let two = 2;
+
+        assert!(one < two);
+    }
+}
 
 /* ;;;;;;;; start Jibralter specs ;;;;;;; */
 /* ;;;;;;;; start Jibralter specs ;;;;;;; */
@@ -104,7 +118,7 @@ fn it_works() {
 /*       expect(childEnv.find("foo").variables.foo).toEqual(6) */
 /*       expect(childEnv.find("bar").variables.bar).toEqual(7) */
 /*       expect(childEnv.find("baz").variables.baz).toEqual(8) */
-}
+/* } */
 
 /* ;;;;;;;; start Jibralter impl ;;;;;;; */
 /* ;;;;;;;; start Jibralter impl ;;;;;;; */
