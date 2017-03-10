@@ -11,6 +11,13 @@ Testing
 =======
 `$ cargo test`
 
+Running REPL
+============
+```
+$ cargo build
+$ ./target/debug/jibralter
+```
+
 Jibraltar
 =========
 
