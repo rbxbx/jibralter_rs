@@ -1,6 +1,3 @@
-#[test]
-fn it_works() {
-
 /* ;;;;;;;; start Jibralter specs ;;;;;;; */
 /* ;;;;;;;; start Jibralter specs ;;;;;;; */
 
@@ -104,7 +101,7 @@ fn it_works() {
 /*       expect(childEnv.find("foo").variables.foo).toEqual(6) */
 /*       expect(childEnv.find("bar").variables.bar).toEqual(7) */
 /*       expect(childEnv.find("baz").variables.baz).toEqual(8) */
-}
+/* } */
 
 /* ;;;;;;;; start Jibralter impl ;;;;;;; */
 /* ;;;;;;;; start Jibralter impl ;;;;;;; */
