@@ -1,20 +1,3 @@
-/* #[test] */
-/* fn it_works() { */
-/*     #[test] */
-/*     fn larger_can_hold_smaller() { */
-/*     } */
-
-#[cfg(test)]
-mod tests {
-#[test]
-    fn it_works() {
-        let one = 1;
-        let two = 2;
-
-        assert!(one < two);
-    }
-}
-
 /* ;;;;;;;; start Jibralter specs ;;;;;;; */
 /* ;;;;;;;; start Jibralter specs ;;;;;;; */
 
