@@ -10,16 +10,23 @@ pub enum Token {
 pub fn tokenize(s: &str) -> Vec<Token> {
   let mut tokens = Vec::new();
   let mut chars = s.chars();
+  let mut paren_depth = 0u32;
   while let Some(c) = chars.next() {
     tokens.push(match c {
-      '(' => Token::ParenL,
-      ')' => Token::ParenR,
+      '(' => {
+        paren_depth += 1;
+        Token::ParenL
+      }
+      ')' => {
+        paren_depth = paren_depth.checked_sub(1).expect("unmatched right paren");
+        Token::ParenR
+      }
       '"' => {
-        let s: String = chars.take_while(|c| c != '"').collect();
+        let s: String = (&mut chars).take_while(|&c| c != '"').collect();
         Token::String(s.into_boxed_str())
       }
       c if c.is_alphabetic() => {
-        let id: String = chars.take_while(|c| !c.is_whitespace()).collect();
+        let id: String = (&mut chars).take_while(|c| !c.is_whitespace()).collect();
         Token::Identifier(id.into_boxed_str())
       }
       c if c.is_whitespace() => continue,
